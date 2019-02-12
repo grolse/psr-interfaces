@@ -1,0 +1,22 @@
+{
+    "name": "grolse/psr-interfaces",
+    "description": "PSR Interfaces samples",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oleh Hrynko",
+            "email": "oleg.grynko@aengizer.dp.ua"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "psr/log": "^1.1@dev",
+        "psr/cache": "^1.0@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hillel\\": "src/"
+        }
+    }
+}
