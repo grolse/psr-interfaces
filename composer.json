@@ -12,7 +12,9 @@
     "minimum-stability": "dev",
     "require": {
         "psr/log": "^1.1@dev",
-        "psr/cache": "^1.0@dev"
+        "psr/cache": "^1.0@dev",
+        "psr/container": "^1.0@dev",
+        "psr/http-message": "^1.0@dev"
     },
     "autoload": {
         "psr-4": {
