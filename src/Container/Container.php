@@ -10,6 +10,11 @@ use Psr\Container\NotFoundExceptionInterface;
 class Container implements ContainerInterface
 {
     /**
+     * @var mixed
+     */
+    private $storage;
+
+    /**
      * Finds an entry of the container by its identifier and returns it.
      *
      * @param string $id Identifier of the entry to look for.
@@ -21,7 +26,11 @@ class Container implements ContainerInterface
      */
     public function get($id)
     {
-        // TODO: Implement get() method.
+        if (!$this->has($id)) {
+            throw new EntryNotFoundException('Service not found');
+        }
+
+        return $this->storage[$id];
     }
 
     /**
@@ -37,7 +46,7 @@ class Container implements ContainerInterface
      */
     public function has($id)
     {
-        // TODO: Implement has() method.
+        return in_array($id, $this->storage);
     }
 
 }
